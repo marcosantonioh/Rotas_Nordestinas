@@ -1,0 +1,363 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: white;
+    overflow-x: hidden;
+}
+
+header {
+    width: 100%;
+    height: 462px;
+    background: url('../images/dsc_0198.jpg') no-repeat center center/cover;
+}
+
+body > header::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 75px;
+    top: 0;
+    background: rgba(255, 255, 255, 0.25);
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(4px);
+}
+
+header .logo {
+    position: absolute;
+    left: 46px;
+    top: 5px;
+    width: 208px;
+    height: 63px;
+}
+
+header nav {
+    position: absolute;
+    top: 30px;
+    right: 50px;
+    display: flex;
+    gap: 50px;
+}
+
+header nav a {
+    color: white;
+    font-size: 15px;
+    text-decoration: none;
+    font-weight: 400;
+    text-align: center;
+}
+
+header nav a:hover {
+    text-decoration: underline;
+}
+
+.divider {
+    width: 1px;
+    height: 20px;
+    background: white;
+}
+
+section.intro {
+    text-align: center;
+    color: #9D4F21;
+    padding: 20px;
+}
+
+section.intro h1 {
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+section.intro p {
+    font-size: 20px;
+    color: black;
+}
+
+.features {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    flex-wrap: wrap;
+    padding: 40px 20px;
+}
+
+.feature {
+    background: rgba(217, 217, 217, 0.2);
+    border-radius: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.55);
+    text-align: center;
+    padding: 20px;
+    width: 300px;
+}
+
+.feature h2 {
+    font-size: 24px;
+    color: #9D4F21;
+    margin-bottom: 10px;
+}
+
+.feature p {
+    font-size: 16px;
+    color: black;
+}
+
+footer {
+    background: #F3E5D0;
+    border-top: 3px solid #6A4519;
+    border-left: 3px solid #6A4519;
+    border-right: 3px solid #6A4519;
+    border-bottom: 3px solid #6A4519;
+    text-align: center;
+    padding: 20px;
+    margin-top: 49px;
+
+}
+
+footer .logo {
+    width: 133px;
+    height: 40px;
+    margin: 10px auto;
+}
+
+footer #slogan {
+    text-align: center;
+    color: #6A4519;
+    font-size: 12.85px;
+    font-family: Inter;
+    font-weight: 800;
+}
+
+footer .intro {
+    text-align: center;
+    color: #6A4519;
+    font-size: 12.85px;
+    font-family: Inter;
+    font-weight: 500;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    /* Altura total da tela */
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background: #F29559;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 5px;
+    box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.2);
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.cta-button:hover {
+    background: #9D4F21;
+    transform: scale(1.05);
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 400px;
+    text-align: center;
+}
+
+.text-box {
+    background: rgba(217, 217, 217, 0.20);
+    border-radius: 15px;
+    border: 1px white solid;
+    padding: 20px;
+    max-width: 865px;
+    width: 90%;
+}
+
+.description {
+    color: white;
+    font-size: 34px;
+    font-family: 'Arial Rounded MT Bold', sans-serif;
+    font-weight: 400;
+    line-height: 1.5;
+}
+
+.button-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 400px;
+    text-align: center;
+    position: relative;
+}
+
+.explore-button {
+    width: 424px;
+    height: 47px;
+    position: absolute;
+    top: -37.8px;
+    background: rgba(217, 217, 217, 0.20);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25) inset;
+    border-radius: 15px;
+    border: 1px rgba(255, 255, 255, 0.55) solid;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+}
+
+.button-text {
+    color: white;
+    font-size: 20px;
+    font-family: Arial;
+    font-weight: 700;
+    word-wrap: break-word;
+}
+
+/* Overlay para o modal */
+.overlay {
+    width: 100%;
+    height: 100%;
+    z-index: 99;
+    background-color: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    top: 0;
+    display: none;
+}
+
+/* Estilo do Modal */
+.modal {
+    background: #fff;
+    /* padding: 20px; */
+    width: 90%;
+    height: 90%;
+    max-width: 1000px;
+    max-height: 700px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex; /* Flexbox para dividir o layout */
+    text-align: left;
+    z-index: 999;
+    display: none; /* Por padrão, o modal está oculto */
+}
+
+.modal-content {
+    display: flex;
+    flex: 1;
+    width: 100%;
+}
+
+.modal-image {
+    flex: 1;
+    background-size: cover; /* Ajusta o tamanho da imagem para preencher o espaço */
+    background-position: center; /* Centraliza a imagem */
+    background-repeat: no-repeat; /* Evita repetições */
+    height: 100%; /* Garante que a imagem ocupe toda a altura do modal */
+    margin: 0; /* Remove quaisquer margens */
+    padding: 0; /* Remove quaisquer espaçamentos internos */
+    border: none; /* Remove a borda entre imagem e formulário (caso exista) */
+}
+
+
+.modal-form {
+    flex: 1;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+.modal-form label {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.modal-form input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.login-button {
+    background-color: #F29559;
+    color: white;
+    border: none;
+    padding: 10px;
+    width: 100%;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.login-button:hover {
+    background-color: #9D4F21;
+}
+
+.modal-form a {
+    margin-top: 10px;
+    color: #6A4519;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.modal-form a:hover {
+    text-decoration: underline;
+}
+
+.modal-form h2 {
+    font-size: 24px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.modal-form header{
+    background: #F3E5D0;
+    height: 70px;
+    margin-bottom: 147px;
+}
+
+.modal-form header img{
+    width: 123px;
+    height: 40px;
+    margin: 9px auto;
+    margin-left: 638px;
+}
+
+/*estilo do botão de voltar*/
+.modal-form .back-button {
+    position: absolute; /* ou relativo, dependendo do layout */
+    top: 20px; /* Move o botão 20px para baixo */
+    margin-left: 10px;
+    font-weight: bold;
+    color:black
+}
+
+
+.modal-form form {
+    padding: 20px;
+    margin: 0 auto;
+    max-width: 400px;
+    width: 100%;
+    margin-bottom: 200px;
+}
+
