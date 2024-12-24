@@ -10,10 +10,8 @@ body {
     overflow-x: hidden;
 }
 
-/* Estilo do Modal */
 .modal {
     background: #fff;
-    /* padding: 20px; */
     width: 90%;
     height: 90%;
     max-width: 1000px;
@@ -23,54 +21,113 @@ body {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    display: flex; /* Flexbox para dividir o layout */
-    text-align: left;
+    display: flex; 
+    flex-direction: row; 
     z-index: 999;
-    display: none; /* Por padrão, o modal está oculto */
-}
-
-.modal-content {
-    display: flex;
-    flex: 1;
-    width: 100%;
+    display: none; 
 }
 
 .modal-image {
-    flex: 1;
-    background-size: cover; /* Ajusta o tamanho da imagem para preencher o espaço */
-    background-position: center; /* Centraliza a imagem */
-    background-repeat: no-repeat; /* Evita repetições */
-    height: 100%; /* Garante que a imagem ocupe toda a altura do modal */
-    margin: 0; /* Remove quaisquer margens */
-    padding: 0; /* Remove quaisquer espaçamentos internos */
-    border: none; /* Remove a borda entre imagem e formulário (caso exista) */
+    width: 50%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 
 .modal-form {
-    flex: 1;
-    height: 100%;
+    width: 50%; 
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
+    text-align: center;
+    box-sizing: border-box;
+    /* background-color: #ff1818; */
+
 }
 
 
-.modal-form label {
-    font-size: 16px;
+.modal-form .header {
+    width: 100%;
+    height: 40%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    /* background-color: #007BFF; */
+}
+.logo{
+    background-color: #FBE1B6;
+    width: 100%;
+    padding: 15px;
+}
+
+.modal-form .header img{
+    width: 10em;
+}
+
+
+.modal-form .header h2{
+    margin-bottom: 5%;
+    /* background-color: aqua; */
+    font-size: 2em;
+}
+
+
+/* Botão de fechar */
+.modal-form .close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 2em;
+    text-decoration: none;
+    color: #333;
+    cursor: pointer;
+    transition: transform 0.5s ease; 
+}
+
+.modal-form .close:hover {
+    transform: rotate(180deg); 
+    color: #ee1d1d; 
+}
+
+
+
+
+
+
+/* Formulário */
+#loginForm {
+    /* background-color: #c04cff; */
+    width: 80%;
+    height: 60%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20%;
+    text-align: left;
+
+}
+
+#loginForm label {
+    display: block;
+    margin-bottom: 10px;
     font-weight: bold;
-    margin-bottom: 5px;
+    text-align: left;
 }
 
-.modal-form input {
+#loginForm input {
     width: 100%;
     padding: 10px;
     margin-bottom: 20px;
     border: 1px solid #ccc;
-    border-radius: 5px;
+    border-radius: 4px;
+    box-sizing: border-box;
 }
 
-.login-button {
+#loginForm .login-button {
     background-color: #F29559;
     color: white;
     border: none;
@@ -83,55 +140,19 @@ body {
     transition: background 0.3s ease;
 }
 
-.login-button:hover {
+#loginForm .login-button:hover {
     background-color: #9D4F21;
 }
 
-.modal-form a {
-    margin-top: 10px;
-    color: #6A4519;
+
+/* Link "Esqueceu a senha" */
+#loginForm a {
     text-decoration: none;
-    font-size: 14px;
+    color: #6A4519;
+    margin-top: 5px;
+    font-size: 0.8em;
 }
 
-.modal-form a:hover {
+#loginForm a:hover {
     text-decoration: underline;
 }
-
-.modal-form h2 {
-    font-size: 24px;
-    text-align: center;
-    margin-bottom: 10px;
-}
-
-.modal-form header{
-    background: #F3E5D0;
-    height: 70px;
-    margin-bottom: 147px;
-}
-
-.modal-form header img{
-    width: 123px;
-    height: 40px;
-    margin: 9px auto;
-    margin-left: 638px;
-}
-
-/*estilo do botão de voltar*/
-.modal-form .back-button {
-    position: absolute; /* ou relativo, dependendo do layout */
-    top: 20px; /* Move o botão 20px para baixo */
-    margin-left: 10px;
-    font-weight: bold;
-    color:black
-}
-
-
-.modal-form form {
-    padding: 20px;
-    margin: 0 auto;
-    max-width: 400px;
-    width: 100%;
-    margin-bottom: 200px;
-}
-

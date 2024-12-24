@@ -15,7 +15,7 @@ header {
     flex-direction: column;
     justify-content: space-between;
     width: 100%;
-    height: 500px;
+    height: 450px;
     background: url('../images/dsc_0198.jpg') no-repeat center center/cover;
 }
 
@@ -24,11 +24,12 @@ header {
     justify-content: space-around;
     align-items: center;
     width: 100%;
-    height: 100px;
+    height: 80px;
     /* background: rgba(255, 255, 255, 0.25); */
     background: #FBE1B6;
     box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.2);
     backdrop-filter: blur(4px);
+    gap: 15em;
 }
 
 .nav-bar img{
