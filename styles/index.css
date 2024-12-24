@@ -11,55 +11,137 @@ body {
 }
 
 header {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     width: 100%;
-    height: 462px;
+    height: 500px;
     background: url('../images/dsc_0198.jpg') no-repeat center center/cover;
 }
 
-body > header::before {
-    content: '';
-    position: absolute;
+.nav-bar{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
     width: 100%;
-    height: 75px;
-    top: 0;
-    background: rgba(255, 255, 255, 0.25);
+    height: 100px;
+    /* background: rgba(255, 255, 255, 0.25); */
+    background: #FBE1B6;
     box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.2);
     backdrop-filter: blur(4px);
 }
 
-header .logo {
-    position: absolute;
-    left: 46px;
-    top: 5px;
-    width: 208px;
-    height: 63px;
+.nav-bar img{
+    width: 10em;
 }
 
-header nav {
-    position: absolute;
-    top: 30px;
-    right: 50px;
+.group1{
     display: flex;
-    gap: 50px;
+    justify-content: space-around;
+    align-items: center;
+    width: 40%;
+    /* background-color: aqua; */
 }
 
-header nav a {
-    color: white;
-    font-size: 15px;
+.group1 a {
+    color: rgb(18, 34, 20);
+    font-size: 14px;
     text-decoration: none;
-    font-weight: 400;
+    font-weight: 600;
     text-align: center;
 }
 
-header nav a:hover {
+.group1 a:hover {
     text-decoration: underline;
 }
 
 .divider {
     width: 1px;
     height: 20px;
-    background: white;
+    background: rgb(18, 34, 20);
 }
+
+
+
+.container1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    /* background-color: rgb(147, 207, 49); */
+    height: 70%;
+    gap: 3em;
+}
+
+
+
+.container2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    /* background-color: rgb(62, 114, 114); */
+    width: 100%;
+}
+
+.text-box {
+    background: rgba(217, 217, 217, 0.20);
+    border-radius: 15px;
+    border: 1px white solid;
+    padding: 20px;
+    max-width: 865px;
+    width: 90%;
+}
+
+.description {
+    color: white;
+    font-size: 34px;
+    font-family: 'Arial Rounded MT Bold', sans-serif;
+    font-weight: 400;
+    line-height: 1.5;
+}
+
+
+
+
+
+.button-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    /* background-color: aqua; */
+}
+
+.explore-button {
+    width: 424px;
+    height: 47px;
+    background: rgba(217, 217, 217, 0.20);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25) inset;
+    border-radius: 15px;
+    border: 1px rgba(255, 255, 255, 0.55) solid;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+}
+
+.button-text {
+    color: white;
+    font-size: 20px;
+    font-family: Arial;
+    font-weight: 700;
+    word-wrap: break-word;
+}
+
+
+
+
+
+
 
 section.intro {
     text-align: center;
@@ -139,13 +221,6 @@ footer .intro {
     font-weight: 500;
 }
 
-.button-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    /* Altura total da tela */
-}
 
 .cta-button {
     display: inline-block;
@@ -165,65 +240,7 @@ footer .intro {
     transform: scale(1.05);
 }
 
-.container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 400px;
-    text-align: center;
-}
 
-.text-box {
-    background: rgba(217, 217, 217, 0.20);
-    border-radius: 15px;
-    border: 1px white solid;
-    padding: 20px;
-    max-width: 865px;
-    width: 90%;
-}
-
-.description {
-    color: white;
-    font-size: 34px;
-    font-family: 'Arial Rounded MT Bold', sans-serif;
-    font-weight: 400;
-    line-height: 1.5;
-}
-
-.button-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 400px;
-    text-align: center;
-    position: relative;
-}
-
-.explore-button {
-    width: 424px;
-    height: 47px;
-    position: absolute;
-    top: -37.8px;
-    background: rgba(217, 217, 217, 0.20);
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25) inset;
-    border-radius: 15px;
-    border: 1px rgba(255, 255, 255, 0.55) solid;
-    cursor: pointer;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-decoration: none;
-}
-
-.button-text {
-    color: white;
-    font-size: 20px;
-    font-family: Arial;
-    font-weight: 700;
-    word-wrap: break-word;
-}
 
 /* Overlay para o modal */
 .overlay {
