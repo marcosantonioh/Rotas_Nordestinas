@@ -39,42 +39,28 @@ body {
     width: 50%; 
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
     text-align: center;
     box-sizing: border-box;
-    /* background-color: #ff1818; */
-
+    /* background-color: #56e22f; */
 }
 
 
 .modal-form .header {
     width: 100%;
-    height: 40%;
+    height: 15%;
     position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-between;
-    /* background-color: #007BFF; */
-}
-.logo{
+    justify-content: center;
     background-color: #FBE1B6;
-    width: 100%;
-    padding: 15px;
 }
+
 
 .modal-form .header img{
     width: 10em;
 }
-
-
-.modal-form .header h2{
-    margin-bottom: 5%;
-    /* background-color: aqua; */
-    font-size: 2em;
-}
-
 
 /* Botão de fechar */
 .modal-form .close {
@@ -93,6 +79,21 @@ body {
     color: #ee1d1d; 
 }
 
+/* Botão de voltar */
+.modal-form .back-button {
+    position: absolute;
+    top: 30px;
+    left: 20px;
+    font-size: 0.8em;
+    text-decoration: none;
+    color: #333;
+    cursor: pointer;
+    font-weight: 800;
+}
+
+.modal-form .back-button:hover {
+    color: #2d7d28; 
+}
 
 
 
@@ -100,15 +101,21 @@ body {
 
 /* Formulário */
 #loginForm {
+    gap: 50px;
     /* background-color: #c04cff; */
     width: 80%;
-    height: 60%;
+    height: 80%;
     padding: 20px;
     display: flex;
     flex-direction: column;
     margin-bottom: 20%;
     text-align: left;
+}
 
+
+/* Formulário */
+#loginForm h2{
+    text-align: center;
 }
 
 #loginForm label {
@@ -156,3 +163,62 @@ body {
 #loginForm a:hover {
     text-decoration: underline;
 }
+
+
+
+
+
+
+
+.content-forgot{
+    /* background-color: #e7c9c9; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2em;
+    height: 80%;
+    padding: 20px;
+    margin-bottom: 20%;
+}
+
+.inputs-forgot{
+    display: flex;
+    flex-direction: column;
+    text-align: start;
+}
+
+.inputs-forgot label{
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+    text-align: left;
+}
+
+
+.inputs-forgot input{
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+
+.inputs-forgot button{
+    background-color: #F29559;
+    color: white;
+    border: none;
+    padding: 10px;
+    width: 100%;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.inputs-forgot button:hover{
+    background-color: #9D4F21;
+}
+

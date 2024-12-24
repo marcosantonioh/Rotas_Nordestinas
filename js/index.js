@@ -5,29 +5,21 @@
 //TODA VEZ QUE CRIAR UM MODAL NOVO PEGUE O ID E COLOQUE AQUI
 //O LOOP ABAIXO IRÁ CRIAR UM EVENTO PARA CADA MODAL QUANDO FOR CLICADO FORA DO MODAL ABERTO,
 //O RESPECTIVO MODAL ABERTO SERÁ FECHADO
-const idExtantModals = ['loginModal'];
+const idExtantModals = ['loginModal', 'forgotPasswordModal'];
 
 idExtantModals.forEach(modal => {
     const openModal = document.getElementById(modal)
     const modalBtn = document.querySelector(`a[modal-target="${openModal.id}"]`)
     document.addEventListener('click', (e) => {
         if(!openModal.contains(e.target) && e.target.getAttribute('modal-target') != modalBtn.getAttribute('modal-target')){
-            closeLoginModal(openModal.id)
+            closeModal(openModal.id)
         }
     })
 })
 
-// Função para fechar o modal
-function closeLoginModal() {
-    const modals = document.querySelectorAll('.modal');
-    const overlay = document.getElementById('overlay');
-
-    modals.forEach(modal => (modal.style.display = 'none'));
-    overlay.style.display = 'none';
-}
 
 // Função para abrir o modal
-function openLoginModal(modalId) {
+function openModal(modalId) {
     const activeModal = document.getElementById(modalId);
     const overlay = document.getElementById('overlay');
 
@@ -57,4 +49,12 @@ function openLoginModal(modalId) {
 
 
 
+// Função para fechar o modal
+function closeModal() {
+    const modals = document.querySelectorAll('.modal');
+    const overlay = document.getElementById('overlay');
+
+    modals.forEach(modal => (modal.style.display = 'none'));
+    overlay.style.display = 'none';
+}
 
