@@ -18,10 +18,11 @@ idExtantModals.forEach(modal => {
 })
 
 // Função para fechar o modal
-function closeLoginModal(modalId) {
-    const activeModal = document.getElementById(modalId);
+function closeLoginModal() {
+    const modals = document.querySelectorAll('.modal');
     const overlay = document.getElementById('overlay');
-    activeModal.style.display = 'none';
+
+    modals.forEach(modal => (modal.style.display = 'none'));
     overlay.style.display = 'none';
 }
 
@@ -29,6 +30,31 @@ function closeLoginModal(modalId) {
 function openLoginModal(modalId) {
     const activeModal = document.getElementById(modalId);
     const overlay = document.getElementById('overlay');
-    activeModal.style.display = 'flex';
-    overlay.style.display = 'block';
+
+    if (activeModal) {
+        // Se o modal já está carregado, apenas exibe
+        activeModal.style.display = 'flex';
+        overlay.style.display = 'block';
+    } else {
+        // Carregar o modal dinamicamente
+        fetch('login.html')
+            .then(response => response.text())
+            .then(data => {
+                // Criar um container para o modal
+                const modalContainer = document.createElement('div');
+                modalContainer.innerHTML = data;
+
+                // Adicionar o modal ao corpo da página
+                document.body.appendChild(modalContainer);
+
+                // Exibir o modal carregado
+                document.getElementById(modalId).style.display = 'flex';
+                overlay.style.display = 'block';
+            })
+            .catch(error => console.error('Erro ao carregar o modal:', error));
+    }
 }
+
+
+
+

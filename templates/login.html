@@ -1,0 +1,36 @@
+<link rel="stylesheet" href="../styles/login.css">
+
+
+<!-- Modal para Login -->
+     
+<div id="loginModal" class="modal">
+    <div class="modal-content">
+        <!-- Parte esquerda: imagem -->
+        <div 
+            class="modal-image" style="background-image: url('../images/c91a33f41deaf0e6aeb01309747b3b1d--beautiful-places-argentina-4098095181.jpg');">
+        </div>
+
+        <!-- Parte direita: formulário -->
+        <div class="modal-form">
+            <div class="header">
+                <header class="header">
+                    <a href="index.html" class="back-button">&lt; VOLTAR</a>
+                    <img class="logo" src="../images/logo/Rota.svg" alt="Rotas Nordestinas">
+                </header>
+                <!-- <a href="javascript:void(0)" class="close" onclick="closeLoginModal('loginModal')">&times;</a> -->
+                <h2>Acesse Sua Conta</h2>
+            </div>
+            <form id="loginForm">
+                <label for="email">E-mail:</label>
+                <input type="email" id="email" name="email" placeholder="Digite seu e-mail" required>
+                
+                <label for="password">Senha:</label>
+                <input type="password" id="password" name="password" placeholder="Digite sua senha" required>
+                
+                <button type="submit" class="login-button">Entrar</button>
+                
+                <a href="#">Esqueceu a senha? Clique Aqui</a>
+            </form>
+        </div>
+    </div>
+</div>
