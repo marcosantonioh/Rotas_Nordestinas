@@ -34,7 +34,6 @@ body {
     background-repeat: no-repeat;
 }
 
-
 .modal-form {
     width: 50%; 
     display: flex;
@@ -45,26 +44,31 @@ body {
     /* background-color: #56e22f; */
 }
 
-
-.modal-form .header {
+.header {
     width: 100%;
-    height: 15%;
-    position: relative;
+    height: 12%;
     display: flex;
-    flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: space-around;
+    gap: 80px;
     background-color: #FBE1B6;
 }
 
+.head{
+    width: 20%;
+    /* background-color: #ee1d1d; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
-.modal-form .header img{
-    width: 10em;
+
+.header img{
+    width: 8em;
 }
 
 /* Botão de fechar */
-.modal-form .close {
-    position: absolute;
+.close {
     top: 20px;
     right: 20px;
     font-size: 2em;
@@ -74,14 +78,13 @@ body {
     transition: transform 0.5s ease; 
 }
 
-.modal-form .close:hover {
+.close:hover {
     transform: rotate(180deg); 
     color: #ee1d1d; 
 }
 
 /* Botão de voltar */
-.modal-form .back-button {
-    position: absolute;
+.back-button {
     top: 30px;
     left: 20px;
     font-size: 0.8em;
@@ -91,7 +94,7 @@ body {
     font-weight: 800;
 }
 
-.modal-form .back-button:hover {
+.back-button:hover {
     color: #2d7d28; 
 }
 
@@ -99,21 +102,20 @@ body {
 
 
 
-/* Formulário */
+
+
+/*********** Formulário ***********/
+
 #loginForm {
     gap: 50px;
-    /* background-color: #c04cff; */
+    background-color: #c04cff;
     width: 80%;
-    height: 80%;
-    padding: 20px;
     display: flex;
     flex-direction: column;
-    margin-bottom: 20%;
     text-align: left;
+    margin-top: 40px;
 }
 
-
-/* Formulário */
 #loginForm h2{
     text-align: center;
 }
@@ -151,7 +153,6 @@ body {
     background-color: #9D4F21;
 }
 
-
 /* Link "Esqueceu a senha" */
 #loginForm a {
     text-decoration: none;
@@ -170,15 +171,15 @@ body {
 
 
 
+/************* esqueceu a senha ********************/
+
 .content-forgot{
     /* background-color: #e7c9c9; */
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    width: 70%;
     gap: 2em;
-    height: 80%;
-    padding: 20px;
-    margin-bottom: 20%;
+    margin-top: 50px;
 }
 
 .inputs-forgot{
@@ -194,7 +195,6 @@ body {
     text-align: left;
 }
 
-
 .inputs-forgot input{
     width: 100%;
     padding: 10px;
@@ -204,8 +204,10 @@ body {
     box-sizing: border-box;
 }
 
-
-.inputs-forgot button{
+.inputs-forgot .login-button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background-color: #F29559;
     color: white;
     border: none;
@@ -216,9 +218,15 @@ body {
     border-radius: 5px;
     cursor: pointer;
     transition: 0.3s ease;
+    text-decoration: none;
 }
 
-.inputs-forgot button:hover{
+.inputs-forgot .login-button:hover{
     background-color: #9D4F21;
 }
+
+
+
+
+/************* recuperar senha ********************/
 
