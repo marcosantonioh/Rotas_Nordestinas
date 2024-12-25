@@ -108,7 +108,7 @@ body {
 
 #loginForm {
     gap: 50px;
-    background-color: #c04cff;
+    /* background-color: #c04cff; */
     width: 80%;
     display: flex;
     flex-direction: column;
@@ -230,3 +230,67 @@ body {
 
 /************* recuperar senha ********************/
 
+.content-codigo {
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    width: 70%;
+    margin-top: 50px;
+    /* background-color: #a2b4c7; */
+}
+
+.content-codigo p{
+    margin: 30px;
+}
+
+.input-group {
+    display: flex;
+    justify-content: center;
+    gap: 8px; /* Espaço entre os campos de entrada */
+    margin: 20px 0;
+    /* background-color: #ee1d1d; */
+}
+
+
+.digit-input {
+    width: 40px;
+    height: 50px;
+    text-align: center;
+    font-size: 18px;
+    border: 0.1em solid #767676;
+    border-radius: 5px;
+}
+
+.digit-input:focus {
+    border-color: #007bff;
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+.confirm-button {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 16px;
+    font-weight: 600;
+}
+
+.confirm-button:hover {
+    background-color: #0056b3;
+}
+
+.resend-link {
+    display: block;
+    margin-top: 8px;
+    font-size: 14px;
+    color: #9D4F21;
+    text-decoration: none;
+}
+
+.resend-link:hover {
+    text-decoration: underline;
+}
