@@ -5,7 +5,14 @@
 //TODA VEZ QUE CRIAR UM MODAL NOVO PEGUE O ID E COLOQUE AQUI
 //O LOOP ABAIXO IRÁ CRIAR UM EVENTO PARA CADA MODAL QUANDO FOR CLICADO FORA DO MODAL ABERTO,
 //O RESPECTIVO MODAL ABERTO SERÁ FECHADO
-const idExtantModals = ['loginModal', 'forgotPasswordModal', 'informarCodigo', 'alterarSenha', 'sucesso'];
+const idExtantModals = [
+    'login', 
+    'forgotPassword', 
+    'informarCodigo', 
+    'alterarSenha', 
+    'sucesso',
+    'cadastro'
+];
 
 idExtantModals.forEach(modal => {
     const openModal = document.getElementById(modal)
@@ -19,7 +26,8 @@ idExtantModals.forEach(modal => {
 
 
 // Função para abrir o modal
-function openModal(modalId) {
+function openModal(modalPath) {
+    const modalId = modalPath.split('/').pop(); // Obtém o nome do modal
     const activeModal = document.getElementById(modalId);
     const overlay = document.getElementById('overlay');
 
@@ -28,9 +36,17 @@ function openModal(modalId) {
         activeModal.style.display = 'flex';
         overlay.style.display = 'block';
     } else {
+        // Construir dinamicamente o caminho do arquivo modal
+        const modalFile = `modais/${modalPath}.html`;
+
         // Carregar o modal dinamicamente
-        fetch('login.html')
-            .then(response => response.text())
+        fetch(modalFile)
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error(`Erro ao carregar o modal: ${modalFile}`);
+                }
+                return response.text();
+            })
             .then(data => {
                 // Criar um container para o modal
                 const modalContainer = document.createElement('div');
@@ -43,7 +59,7 @@ function openModal(modalId) {
                 document.getElementById(modalId).style.display = 'flex';
                 overlay.style.display = 'block';
             })
-            .catch(error => console.error('Erro ao carregar o modal:', error));
+            .catch(error => console.error(error));
     }
 }
 
