@@ -5,7 +5,7 @@
 //TODA VEZ QUE CRIAR UM MODAL NOVO PEGUE O ID E COLOQUE AQUI
 //O LOOP ABAIXO IRÁ CRIAR UM EVENTO PARA CADA MODAL QUANDO FOR CLICADO FORA DO MODAL ABERTO,
 //O RESPECTIVO MODAL ABERTO SERÁ FECHADO
-const idExtantModals = ['loginModal', 'forgotPasswordModal', 'informarCodigo'];
+const idExtantModals = ['loginModal', 'forgotPasswordModal', 'informarCodigo', 'alterarSenha', 'sucesso'];
 
 idExtantModals.forEach(modal => {
     const openModal = document.getElementById(modal)
