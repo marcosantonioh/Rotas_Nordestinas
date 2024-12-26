@@ -2,7 +2,7 @@
 
 
 <!-- Modal para Cadastro -->
-<div id="cadastroModal" class="modal">
+<div id="cadastro" class="modal">
         <!-- Parte esquerda: imagem -->
         <div 
             class="modal-image" style="background-image: url('../images/c91a33f41deaf0e6aeb01309747b3b1d--beautiful-places-argentina-4098095181.jpg');">
@@ -23,16 +23,47 @@
                     <a class="close" href="javascript:void(0)" onclick="closeModal('cadastroModal')">&times;</a>
                 </div>
             </div>
-            <form id="loginForm">
-                <h2>Acesse Sua Conta</h2>
-                <div class="content-form">
-                    <label for="email">E-mail:</label>
-                    <input type="email" id="email" name="email" placeholder="Digite seu e-mail" required>
-                    <label for="password">Senha:</label>
-                    <input type="password" id="password" name="password" placeholder="Digite sua senha" required>
-                    <button type="submit" class="login-button">Entrar</button>
-                    <a href="javascript:void(0)" onclick="openModal('forgotPasswordModal')">Esqueceu a senha? Clique Aqui</a>
+            <div class="progress">
+                <div class="progress-content">
+                    <span class="circle">1</span>
+                    <h4>Dados pessais</h4>
                 </div>
+                <div class="progress-content">
+                    <span class="circle">2</span>
+                    <h4>Interesses pessais</h4>
+                </div>
+                <div class="progress-content">
+                    <span class="circle">3</span>
+                    <h4>Usuario e senha</h4>
+                </div>
+                <div class="progress-content">
+                    <span class="circle">4</span>
+                    <h4>Termos e condições</h4>
+                </div>
+            </div>
+
+            <form id="cadastroForm">
+                <div class="form-group">
+                    <label for="nome">Nome<span class="required"> *</span>:</label>
+                    <input type="text" id="nome" name="nome" placeholder="Digite seu nome" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="sobrenome">Sobrenome<span class="required"> *</span>:</label>
+                    <input type="text" id="sobrenome" name="sobrenome" placeholder="Digite seu sobrenome" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">E-mail<span class="required"> *</span>:</label>
+                    <input type="email" id="email" name="email" placeholder="Digite seu e-mail" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="telefone">Telefone<span class="required"> *</span>:</label>
+                    <input type="tel" id="telefone" name="telefone" placeholder="Digite seu telefone" required>
+                </div>
+                                
+                <a href="javascript:void(0)" onclick="openModal('cadastro/')">Avançar</a>
             </form>
         </div>
 </div>
