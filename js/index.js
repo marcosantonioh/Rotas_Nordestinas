@@ -11,7 +11,11 @@ const idExtantModals = [
     'informarCodigo', 
     'alterarSenha', 
     'sucesso',
-    'cadastro'
+    'cadastro1',
+    'cadastro2',
+    'cadastro3',
+    'cadastro4',
+    'cadastro5'
 ];
 
 idExtantModals.forEach(modal => {
@@ -73,4 +77,7 @@ function closeModal() {
     modals.forEach(modal => (modal.style.display = 'none'));
     overlay.style.display = 'none';
 }
+
+
+
 
