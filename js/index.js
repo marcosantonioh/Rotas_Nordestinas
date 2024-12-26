@@ -16,7 +16,12 @@ const idExtantModals = [
     'cadastro3',
     'cadastro4',
     'cadastro5',
-    'cadastro_C1'
+    'cadastro_C1',
+    'cadastro_C2',
+    'cadastro_C3',
+    'cadastro_C4',
+    'cadastro_C5',
+    'cadastro_C6'
 ];
 
 idExtantModals.forEach(modal => {

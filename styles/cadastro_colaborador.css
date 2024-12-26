@@ -225,7 +225,7 @@ body {
     /* background-color: #007BFF; */
 }
 
-.group1{
+.content .group1{
     /* background-color: #2d7d28; */
     display: flex;
     width: 100%;
@@ -293,11 +293,7 @@ input[type="date"]:focus {
 
 
 
-
-
-
 /************** Cadastro 2 ****************/
-
 
 
 
@@ -312,3 +308,15 @@ input[type="date"]:focus {
 
 
 /************** Cadastro 5 ****************/
+.termos{
+    width: 90%;
+    margin: 70px 0 30px 0;
+    font-size: 14px;
+    text-align: justify;
+}
+
+/************** Cadastro 6 ****************/
+.sucess{
+    margin: 80px 0px 80px 0px;
+    font-size: 10px;
+}
