@@ -351,10 +351,13 @@ body {
 /******* sucesso-Modal *********/
 
 .sucess{
+    /* background-color: #0056b3; */
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    margin: 0 auto;
 }
 
 .sucess h1{
@@ -363,11 +366,12 @@ body {
 }
 
 .sucess img{
-    width: 250px;
+    width: 200px;
     margin-top: 50px;
 }
 
 .sucess a{
+    width: 50%;
     background-color: #007bff;
     color: #fff;
     padding: 10px 20px;
@@ -375,7 +379,7 @@ body {
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    margin-top: 16px;
+    margin-top: 60px;
     font-weight: 600;
     text-decoration: none;
     text-align: center;

@@ -203,6 +203,99 @@ body {
 
 
 
+
+
+
+
+/************** Cadastro 1 ****************/
+
+/************** Cadastro 1 ****************/
+
+
+/* Estilização geral do formulário */
+.content {
+    width: 100%;
+    max-width: 400px;
+    padding: 10px;
+    /* background-color: #ff3838; */
+    /* border: 1px solid #ddd; */
+    border-radius: 8px;
+}
+
+/* Grupo de formulário */
+.form-group {
+    margin-bottom: 15px;
+    /* background-color: #007BFF; */
+}
+
+.content .group1{
+    /* background-color: #2d7d28; */
+    display: flex;
+    width: 100%;
+    gap: 10px;
+}
+
+.required {
+    color: red;
+    font-weight: bold;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 14px;
+    color: #333;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="date"] {
+    width: 100%;
+    padding: 8px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="date"]:focus {
+    border-color: #007BFF;
+    outline: none;
+    box-shadow: 0 0 4px rgba(0, 123, 255, 0.2);
+}
+
+/* Estilo do botão avançar */
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #007BFF;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+}
+
+/* Informações adicionais */
+.info-campos {
+    font-size: 12px;
+    color: #666;
+    margin-top: 10px;
+}
+
+
+
+
+
 /************** Cadastro 2 ****************/
 
 .opcoes.grid {
