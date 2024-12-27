@@ -133,6 +133,10 @@ body {
 
 
 .sidebar-content .botoes .button{
+    /* color: #070707; */
+    text-decoration: none;
+    align-items: center;
+    text-align: center;
     background-color: #f4d19d;
     padding: 15px 10px;
     cursor: pointer;

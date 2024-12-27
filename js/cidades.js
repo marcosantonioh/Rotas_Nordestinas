@@ -24,3 +24,4 @@ userSidebarWrapper.addEventListener('click', (event) => {
         userSidebar.classList.remove('open');
     }
 });
+
