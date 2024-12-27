@@ -1,4 +1,11 @@
 /* style.css */
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -7,118 +14,6 @@ body {
 }
 
 
-.hero {
-    background: url('sunset.jpg') no-repeat center center/cover;
-    text-align: center;
-    color: white;
-    padding: 100px 20px;
-}
-
-.hero h1 {
-    font-size: 2.5em;
-    margin-bottom: 20px;
-}
-
-.hero button {
-    background: #FFA726;
-    border: none;
-    padding: 10px 20px;
-    color: white;
-    font-size: 1em;
-    cursor: pointer;
-    border-radius: 5px;
-}
-
-main {
-    padding: 2em;
-    background: #FFFDF8;
-}
-
-.features {
-    text-align: center;
-}
-
-.features-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
-    margin-top: 20px;
-}
-
-.feature {
-    background: #FFF4E5;
-    padding: 20px;
-    border: 1px solid #FFDCAA;
-    border-radius: 5px;
-}
-
-footer {
-    background: #F3E5D0;
-    border-top: 3px solid #6A4519;
-    border-left: 3px solid #6A4519;
-    border-right: 3px solid #6A4519;
-    border-bottom: 3px solid #6A4519;
-    text-align: center;
-    margin-top: 40px;
-    padding: 25px;
-}
-
-.logo img {
-    width: 100px; /* Defina a largura desejada */
-    height: auto; /* Mantém a proporção da imagem */
-}
-
-
-header .menu a {
-    text-decoration: none;
-    color: #000;
-    font-weight: bold;
-}
-
-/* Header container */
-.header-container {
-    display: flex;
-    justify-content: space-between; /* Espaço entre a logo e o menu */
-    align-items: right; /* Centraliza verticalmente */
-    padding: 10px 20px;
-    background-color: #FFF4E5; /* Cor de fundo (opcional) */
-    border-bottom: px solid #ccc; /* Linha separadora (opcional) */
-}
-
-
-/* Menu */
-.menu {
-    display: flex;
-}
-
-/* Links do menu */
-.menu a {
-    text-decoration: none; /* Remove o sublinhado */
-    color: #000; /* Cor do texto */
-    font-weight: bold; /* Negrito */
-    font-size: 0.9em;
-    transition: color 0.3s ease;
-    padding: 10px; /* Adiciona espaçamento interno horizontal */
-    position: relative; /* Necessário para o alinhamento das bordas */
-}
-
-/* Adiciona uma borda vertical apenas nos links após o primeiro */
-.menu a:not(:first-child) {
-    border-left: 2px solid #020202; /* Linha vertical */
-}
-
-.hero img {
-    width: 800px;
-    height: auto;
-    margin-bottom: 20px;
-}
-
-/* General Reset */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
 
 /* Header */
 .header {
@@ -126,28 +21,89 @@ header .menu a {
     align-items: center;
     justify-content: space-between;
     background-color: #f4d19d;
-    padding: 10px 20px;
+    padding: 15px 50px;
     border-bottom: 1px solid #6A4519;
-
 }
 
 .back-button {
+    /* background-color: #ff8d8d; */
     text-decoration: none;
     color: black;
     font-weight: bold;
     font-size: 1rem;
 }
-
-.logo {
-    font-size: 1.5rem;
-    color: #333;
+.back-button:hover {
+    color: #2d7d28; 
 }
 
+.header .logo {
+    font-size: 1.5rem;
+    color: #333;
+    /* background-color: #ff2a2a; */
+    align-items: center;
+    width: 133px;
+    height: 40px;
+    margin-right: 55px;
+}
+
+
 .menu-button {
+    /* background-color: #ff2a2a; */
     background: none;
     border: none;
     font-size: 1.5rem;
     cursor: pointer;
+}
+
+
+
+
+
+
+/* Estilos para o modal lateral */
+.sidebar {
+    position: fixed;
+    top: 0;
+    right: -300px; /* Começa fora da tela */
+    width: 300px;
+    height: 100%;
+    background-color: #f4f4f4;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.2);
+    transition: right 0.3s ease;
+    z-index: 1000;
+}
+
+.sidebar-content {
+    padding: 20px;
+}
+
+.sidebar.open {
+    right: 0; /* Aparece na tela */
+}
+
+.close-button {
+    background-color: #ff5c5c;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.close-button:hover {
+    background-color: #ff3333;
+}
+
+
+
+
+
+
+
+
+main {
+    padding: 2em;
+    background: #FFFDF8;
 }
 
 /* Section */
@@ -162,6 +118,12 @@ header .menu a {
     color: #070707;
     text-align: center;
 }
+
+
+
+
+
+
 
 /* Cities Grid */
 .cities-grid {
@@ -198,21 +160,13 @@ header .menu a {
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
 }
 
-/* Responsive */
-@media (max-width: 768px) {
-    .header {
-        flex-direction: column;
-        text-align: center;
-    }
 
-    .menu-button {
-        margin-top: 10px;
-    }
 
-    .cities-grid {
-        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    }
-}
+
+
+
+
+
 
 footer {
     background: #F3E5D0;
@@ -245,10 +199,27 @@ footer #slogan {
     font-family: Inter;
     font-weight: 800;
 }
-header .logo {
-    
-    align-items: center;
-    width: 133px;
-    height: 40px;
-    margin-right: 55px;
+
+
+
+
+
+
+
+
+
+/* Responsive */
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .menu-button {
+        margin-top: 10px;
+    }
+
+    .cities-grid {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    }
 }
