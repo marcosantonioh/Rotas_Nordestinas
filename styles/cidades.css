@@ -59,6 +59,16 @@ body {
 
 
 
+
+
+
+
+
+
+
+
+
+
 /* Contêiner externo para capturar cliques fora */
 .sidebar-wrapper {
     position: fixed;
@@ -66,9 +76,9 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.5); /* Fundo semi-transparente */
-    display: none; /* Escondido por padrão */
-    z-index: 999; /* Abaixo do modal */
+    background: rgba(0, 0, 0, 0.5); 
+    display: none; 
+    z-index: 999; 
 }
 
 .sidebar-wrapper.open {
@@ -90,7 +100,7 @@ body {
 
 
 .sidebar-content{
-    background-color: #2d7d28;
+    /* background-color: #2d7d28; */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -99,15 +109,17 @@ body {
 }
 
 .sidebar-content .header{
-    background-color: #d5e3ff;
+    /* background-color: #d5e3ff; */
+    background: none;
     display: flex;
     flex-direction: column;
     align-items: center;
     border: none;
+    margin-top: 30px;
 }
 
 .sidebar-content .botoes{
-    background-color: #47db9b;
+    /* background-color: #47db9b; */
     display: flex;
     flex-direction: column;
     padding: 10px 10px;
@@ -115,14 +127,24 @@ body {
     height: 40%;
     gap: 15px;
     justify-content: center;
-    margin-bottom: 20px;
+    margin-bottom: 100px;
+    
 }
 
 
 .sidebar-content .botoes .button{
-    padding: 10px 10px;
+    background-color: #f4d19d;
+    padding: 15px 10px;
     cursor: pointer;
-
+    font-size:1em;
+    font-weight: 500;
+    border: none;
+    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+}
+.sidebar-content .botoes .button:hover {
+    transform: translateY(1px); /* Move 1px para baixo */
+    box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.2); /* Ajusta a sombra para dar profundidade */
 }
 
 .close-button {
@@ -132,6 +154,13 @@ body {
     padding: 10px 15px;
     cursor: pointer;
     border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    font-size:1em;
+    font-weight: 600;
+    margin-top: 40px;
 }
 
 .close-button:hover {
@@ -145,6 +174,45 @@ body {
 .sidebar{
     right: 0;
 }
+
+
+/* Defina a animação */
+@keyframes slideIn {
+    from {
+        right: -300px;
+    }
+    to {
+        right: 0;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Aplique ao modal */
+.sidebar.open {
+    animation: slideIn 0.3s ease;
+}
+
+.sidebar-wrapper.open {
+    animation: fadeIn 0.3s ease;
+}
+
+
+
+
+
+
+
+
+
+
 
 
 
