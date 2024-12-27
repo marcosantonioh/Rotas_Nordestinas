@@ -20,7 +20,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: #f4d19d;
+    background-color: #FBE1B6;
     padding: 15px 50px;
     border-bottom: 1px solid #6A4519;
 }
@@ -208,6 +208,51 @@ body {
     animation: fadeIn 0.3s ease;
 }
 
+
+
+
+
+
+
+
+
+
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+    z-index: 2000;
+}
+
+.modal-content {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 400px;
+    text-align: center;
+}
+
+.modal-close {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background: #ff5c5c;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.modal-close:hover {
+    background: #ff3333;
+}
 
 
 

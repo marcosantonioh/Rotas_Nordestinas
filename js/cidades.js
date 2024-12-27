@@ -25,3 +25,61 @@ userSidebarWrapper.addEventListener('click', (event) => {
     }
 });
 
+
+
+
+
+
+
+// Função para inicializar os modais
+function initModals() {
+    const touristModal = document.getElementById('touristModal');
+    const tipModal = document.getElementById('tipModal');
+    const activityModal = document.getElementById('activityModal');
+
+    // Botões de abrir modal
+    const touristSuggestionButton = document.getElementById('touristSuggestionButton');
+    const tipSuggestionButton = document.getElementById('tipSuggestionButton');
+    const activitySuggestionButton = document.getElementById('activitySuggestionButton');
+
+    // Botões de fechar modal
+    const closeTouristModal = document.getElementById('closeTouristModal');
+    const closeTipModal = document.getElementById('closeTipModal');
+    const closeActivityModal = document.getElementById('closeActivityModal');
+
+    // Abrir modais
+    touristSuggestionButton?.addEventListener('click', () => {
+        touristModal.style.display = 'flex';
+    });
+
+    tipSuggestionButton?.addEventListener('click', () => {
+        tipModal.style.display = 'flex';
+    });
+
+    activitySuggestionButton?.addEventListener('click', () => {
+        activityModal.style.display = 'flex';
+    });
+
+    // Fechar modais
+    closeTouristModal?.addEventListener('click', () => {
+        touristModal.style.display = 'none';
+    });
+
+    closeTipModal?.addEventListener('click', () => {
+        tipModal.style.display = 'none';
+    });
+
+    closeActivityModal?.addEventListener('click', () => {
+        activityModal.style.display = 'none';
+    });
+
+    // Fechar modal ao clicar fora
+    window.addEventListener('click', (event) => {
+        if (event.target === touristModal) touristModal.style.display = 'none';
+        if (event.target === tipModal) tipModal.style.display = 'none';
+        if (event.target === activityModal) activityModal.style.display = 'none';
+    });
+}
+
+// Chamar a inicialização após carregar o conteúdo do modal
+window.addEventListener('DOMContentLoaded', initModals);
