@@ -6,6 +6,7 @@
     <title>Rotas Nordestinas</title>
     <link rel="stylesheet" href="../styles/cidades.css">
     <link rel="icon" href="../images/logo/favicon_verde.png" type="image/png">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 <body>
 
@@ -15,19 +16,30 @@
         <button class="menu-button" id="menuButton">&#9776;</button>
     </header>
 
+
+
     <!-- Modal Lateral -->
-    <div id="userSidebar" class="sidebar">
-        <div class="sidebar-content">
-            <h2>Pikachu Silva</h2>
-            <p>Email: pikachu.silva@pokebola.com</p>
-            <button class="close-button" id="closeButton">Sugerir Ponto Turistico</button>
-            <button class="close-button" id="closeButton">Sugerir Dica</button>
-            <button class="close-button" id="closeButton">Sugerir Atividade</button>
-            
-            <button class="close-button" id="closeButton">Fechar</button>
+    <div id="userSidebarWrapper" class="sidebar-wrapper">
+        <div id="userSidebar" class="sidebar">
+            <div class="sidebar-content">
+                <div class="header">
+                    <img src="/images/PERFIL.png" alt="">
+                    <h2>Pikachu Silva</h2>
+                    <p>Email: pikachu.silva@pokebola.com</p>
+                </div>
+                
+                <div class="botoes">
+                    <button class="button">Sugerir Ponto Turistico</button>
+                    <button class="button">Sugerir Dica</button>
+                    <button class="button">Sugerir Atividade</button>
+                    
+                    <button class="close-button" id="closeButton">Fechar</button>
+                </div>
+            </div>
         </div>
     </div>
-    
+        
+
     
     <main class="main">
         <section class="region">
