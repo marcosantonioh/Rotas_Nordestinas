@@ -1,0 +1,52 @@
+<button class="button" id="touristSuggestionButton">Sugerir Ponto Turístico</button>
+<button class="button" id="tipSuggestionButton">Sugerir Dica</button>
+<button class="button" id="activitySuggestionButton">Sugerir Atividade</button>
+
+
+
+                    
+
+    <!-- Modal para Sugerir Ponto Turístico -->
+    <div id="touristModal" class="modal">
+        <div class="modal-content">
+            <img src="/images/logo/favicon_cinza.svg" alt="">
+            <h3>Sugerir Ponto Turístico</h3>
+            <div class="dados">
+                <label for="touristName">Nome do Ponto Turístico:</label>
+                <input type="text" id="touristName" placeholder="Digite o nome">
+                <label for="touristLocation">Localização:</label>
+                <input type="text" id="touristLocation" placeholder="Digite a localização">
+            </div>
+            
+            <button class="modal-close" id="closeTouristModal">Enviar sugestão</button>
+        </div>
+    </div>
+    
+    <!-- Modal para Sugerir Dica -->
+    <div id="tipModal" class="modal">
+        <div class="modal-content">
+            <img src="/images/logo/favicon_cinza.svg" alt="">
+            <h3>Sugerir Dica</h3>
+            <div class="dados">
+                <label for="tipText">Dica:</label>
+                <textarea id="tipText" placeholder="Digite sua dica"></textarea>
+            </div>
+            
+            <button class="modal-close" id="closeTipModal">Enviar sugestão</button>
+        </div>
+    </div>
+    
+    <!-- Modal para Sugerir Atividade -->
+    <div id="activityModal" class="modal">
+        <div class="modal-content">
+            <img src="/images/logo/favicon_cinza.svg" alt="">
+            <h3>Sugerir Atividade</h3>
+            <div class="dados">
+                <label for="activityName">Nome da Atividade:</label>
+            <input type="text" id="activityName" placeholder="Digite o nome da atividade">
+            </div>
+            
+            <button class="modal-close" id="closeActivityModal">Enviar sugestão</button>
+        </div>
+    </div>
+

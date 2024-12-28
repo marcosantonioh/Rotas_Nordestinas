@@ -4,19 +4,19 @@ const closeButton = document.getElementById('closeButton');
 const userSidebar = document.getElementById('userSidebar');
 const userSidebarWrapper = document.getElementById('userSidebarWrapper');
 
-// Abre o modal ao clicar no botão do menu
+// Abre o sidebar ao clicar no botão do menu
 menuButton.addEventListener('click', () => {
     userSidebarWrapper.classList.add('open');
     userSidebar.classList.add('open');
 });
 
-// Fecha o modal ao clicar no botão de fechar
+// Fecha o sidebar ao clicar no botão de fechar
 closeButton.addEventListener('click', () => {
     userSidebarWrapper.classList.remove('open');
     userSidebar.classList.remove('open');
 });
 
-// Fecha o modal ao clicar fora dele
+// Fecha o sidebar ao clicar fora dele
 userSidebarWrapper.addEventListener('click', (event) => {
     // Verifica se o clique foi fora do modal
     if (!userSidebar.contains(event.target)) {
@@ -30,56 +30,53 @@ userSidebarWrapper.addEventListener('click', (event) => {
 
 
 
-
-// Função para inicializar os modais
-function initModals() {
-    const touristModal = document.getElementById('touristModal');
-    const tipModal = document.getElementById('tipModal');
-    const activityModal = document.getElementById('activityModal');
-
-    // Botões de abrir modal
-    const touristSuggestionButton = document.getElementById('touristSuggestionButton');
-    const tipSuggestionButton = document.getElementById('tipSuggestionButton');
-    const activitySuggestionButton = document.getElementById('activitySuggestionButton');
-
-    // Botões de fechar modal
-    const closeTouristModal = document.getElementById('closeTouristModal');
-    const closeTipModal = document.getElementById('closeTipModal');
-    const closeActivityModal = document.getElementById('closeActivityModal');
-
-    // Abrir modais
-    touristSuggestionButton?.addEventListener('click', () => {
-        touristModal.style.display = 'flex';
-    });
-
-    tipSuggestionButton?.addEventListener('click', () => {
-        tipModal.style.display = 'flex';
-    });
-
-    activitySuggestionButton?.addEventListener('click', () => {
-        activityModal.style.display = 'flex';
-    });
-
-    // Fechar modais
-    closeTouristModal?.addEventListener('click', () => {
-        touristModal.style.display = 'none';
-    });
-
-    closeTipModal?.addEventListener('click', () => {
-        tipModal.style.display = 'none';
-    });
-
-    closeActivityModal?.addEventListener('click', () => {
-        activityModal.style.display = 'none';
-    });
-
-    // Fechar modal ao clicar fora
-    window.addEventListener('click', (event) => {
-        if (event.target === touristModal) touristModal.style.display = 'none';
-        if (event.target === tipModal) tipModal.style.display = 'none';
-        if (event.target === activityModal) activityModal.style.display = 'none';
-    });
+// Função genérica para abrir sidebars
+function openSidebar(id) {
+    const sidebar = document.getElementById(id);
+    if (sidebar && !sidebar.classList.contains('open')) {
+        sidebar.classList.add('open'); // Adiciona a classe 'open' apenas se o sidebar não estiver aberto
+    }
 }
 
-// Chamar a inicialização após carregar o conteúdo do modal
-window.addEventListener('DOMContentLoaded', initModals);
+// Função genérica para fechar sidebars
+function closeSidebar(id) {
+    const sidebar = document.getElementById(id);
+    if (sidebar && sidebar.classList.contains('open')) {
+        sidebar.classList.remove('open'); // Remove a classe 'open' se o sidebar estiver aberto
+    }
+}
+
+// Adiciona eventos aos botões
+document.getElementById('editProfileButton').addEventListener('click', () => {
+    openSidebar('editProfileSidebar'); // Abre o sidebar de edição de perfil
+});
+
+document.getElementById('suggestionButton').addEventListener('click', () => {
+    openSidebar('suggestionSidebar'); // Abre o sidebar de sugestão
+});
+
+// Fecha o sidebar ao clicar no botão de fechar
+document.getElementById('closeButton').addEventListener('click', () => {
+    closeSidebar('userSidebarWrapper'); // Fecha o sidebar principal
+});
+
+// Fecha o sidebar ao clicar fora dele
+userSidebarWrapper.addEventListener('click', (event) => {
+    if (!userSidebar.contains(event.target)) {
+        closeSidebar('userSidebarWrapper');
+    }
+});
+
+// Função para exibir a mensagem de sucesso
+function showSuccessMessage(event) {
+    event.preventDefault(); // Previne o comportamento padrão do formulário
+    const suggestionForm = document.getElementById('suggestionForm');
+    suggestionForm.style.display = 'none'; // Oculta o formulário
+    const successMessage = document.getElementById('successMessage');
+    successMessage.style.display = 'block'; // Exibe a mensagem de sucesso
+}
+
+// Função para navegar de volta à página inicial
+function goToHomePage() {
+    window.location.href = 'cidades.html';
+}

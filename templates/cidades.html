@@ -27,11 +27,10 @@
                 </div>
     
                 <div class="botoes">
-                    <button class="button" id="touristSuggestionButton">Sugerir Ponto Turístico</button>
-                    <button class="button" id="tipSuggestionButton">Sugerir Dica</button>
-                    <button class="button" id="activitySuggestionButton">Sugerir Atividade</button>
-    
-                    <button class="close-button" id="closeButton">Fechar <i class="bx bx-log-out"></i></button>
+                    <button class="button" id="editProfileButton"><i class="bx bx-user"></i>Editar Perfil</button>
+                    <button class="button" id="suggestionButton"><i class="bx bx-comment-detail"></i>Fazer uma Sugestão</button>
+
+                    <button class="close-button" id="closeButton">Sair <i class="bx bx-log-out"></i></button>
                 </div>
             </div>
         </div>
@@ -40,53 +39,85 @@
 
 
 
-    <!-- Modal para Sugerir Ponto Turístico -->
-    <div id="touristModal" class="modal">
-        <div class="modal-content">
-            <img src="/images/logo/favicon_cinza.svg" alt="">
-            <h3>Sugerir Ponto Turístico</h3>
-            <div class="dados">
-                <label for="touristName">Nome do Ponto Turístico:</label>
-                <input type="text" id="touristName" placeholder="Digite o nome">
-                <label for="touristLocation">Localização:</label>
-                <input type="text" id="touristLocation" placeholder="Digite a localização">
+
+
+
+
+    <div id="editProfileSidebar" class="sidebar-wrapper">
+        <div class="sidebar">
+            <div class="sidebar-content edit-perfil">
+                <h2>Editar Perfil</h2>
+                <!-- Conteúdo adicional para editar perfil pode ser adicionado aqui -->
+                <button class="close-button" onclick="closeSidebar('editProfileSidebar')">Fechar</button>
             </div>
-            
-            <button class="modal-close" id="closeTouristModal">Enviar sugestão</button>
         </div>
     </div>
     
-    <!-- Modal para Sugerir Dica -->
-    <div id="tipModal" class="modal">
-        <div class="modal-content">
-            <img src="/images/logo/favicon_cinza.svg" alt="">
-            <h3>Sugerir Dica</h3>
-            <div class="dados">
-                <label for="tipText">Dica:</label>
-                <textarea id="tipText" placeholder="Digite sua dica"></textarea>
-            </div>
-            
-            <button class="modal-close" id="closeTipModal">Enviar sugestão</button>
-        </div>
-    </div>
+    <div id="suggestionSidebar" class="sidebar-wrapper">
+        <div class="sidebar">
+            <div class="sidebar-content sugestion">
+                <div class="sugestion-head">
+                    <a class="back-button" href="javascript:void(0)" 
+                        onclick="closeSidebar('suggestionSidebar')">
+                        &lt;
+                    </a> 
+                    <h2>Nova Sugestão</h2>
+                </div>
+                
+                <form id="suggestionForm" class="form" onsubmit="showSuccessMessage(event)">
+                    <!-- Campo Cidade -->
+                    <label for="city">Cidade:</label>
+                    <input type="text" id="city" name="city" placeholder="Digite a cidade">
     
-    <!-- Modal para Sugerir Atividade -->
-    <div id="activityModal" class="modal">
-        <div class="modal-content">
-            <img src="/images/logo/favicon_cinza.svg" alt="">
-            <h3>Sugerir Atividade</h3>
-            <div class="dados">
-                <label for="activityName">Nome da Atividade:</label>
-            <input type="text" id="activityName" placeholder="Digite o nome da atividade">
+                    <!-- Campo Categoria -->
+                    <label for="category">Categoria:</label>
+                    <select id="category" name="category">
+                        <option value="">Selecione uma categoria</option>
+                        <option value="gastronomia">Gastronomia</option>
+                        <option value="praias">Praias</option>
+                        <option value="festas-tradicionais">Festas Tradicionais</option>
+                        <option value="artesanato">Artesanato</option>
+                        <option value="trilhas-ecologicas">Trilhas Ecológicas</option>
+                        <option value="pontos-historicos">Pontos Históricos</option>
+                        <option value="roteiros-culturais">Roteiros Culturais</option>
+                    </select>
+    
+                    <!-- Campo Nome -->
+                    <label for="name">Nome:</label>
+                    <input type="text" id="name" name="name" placeholder="Digite o nome" >
+    
+                    <!-- Campo Descrição -->
+                    <label for="description">Descrição:</label>
+                    <textarea id="description" name="description" placeholder="Digite a descrição" rows="4" ></textarea>
+    
+                    <!-- Campo Anexo -->
+                    <label for="attachment">Anexo:</label>
+                    <input type="file" id="attachment" name="attachment" accept="image/*, .pdf, .doc, .docx">
+    
+                    <!-- Botões -->
+                    <div class="form-buttons">
+                        <button type="button" class="button cancel" onclick="closeSidebar('suggestionSidebar')">Cancelar</button>
+                        <button type="submit" class="button send">Enviar Sugestão</button>
+                    </div>
+                </form>
+                
+                <div id="successMessage" class="success-container" style="display: none;">
+                    <div class="content">
+                        <img src="/images/confirm/green-check-mark-icon-with-circle-tick-box-check-list-circle-frame-checkbox-symbol-sign-png 1.png" alt="Ícone de Sucesso" class="success-image" />
+                        <p>Enviado com sucesso!</p>
+                        <button class="button back-home" onclick="goToHomePage()">Voltar à Página Inicial</button>
+                    </div>
+                </div>
             </div>
-            
-            <button class="modal-close" id="closeActivityModal">Enviar sugestão</button>
         </div>
     </div>
 
 
+    
+    
 
 
+    
 
     
     <main class="main">

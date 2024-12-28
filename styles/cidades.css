@@ -96,10 +96,14 @@ body {
     box-shadow: -5px 0 5px rgba(0, 0, 0, 0.2);
     transition: right 0.3s ease;
     z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 
 .sidebar-content{
+    width: 100%;
     /* background-color: #2d7d28; */
     display: flex;
     flex-direction: column;
@@ -145,7 +149,15 @@ body {
     border: none;
     box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.2);
     border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
 }
+
+.sidebar-content i{
+    font-size: 1.2em;
+}
+
 .sidebar-content .botoes .button:hover {
     transform: translateY(1px); /* Move 1px para baixo */
     box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.2); /* Ajusta a sombra para dar profundidade */
@@ -162,7 +174,7 @@ body {
     align-items: center;
     justify-content: center;
     gap: 10px;
-    font-size:1em;
+    font-size:1.2em;
     font-weight: 600;
     margin-top: 40px;
 }
@@ -212,11 +224,215 @@ body {
 
 
 
+/**************** sidebar de editar perfil *********************/
+
+
+.edit-perfil{
+    width: 100%;
+    height: 100%;
+    background-color: #84d8ff;
+    padding: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+
+/**************** sidebar de sugestao *********************/
+
+
+.sugestion{
+    width: 100%;
+    height: 100%;
+    background-color: #f4d19d;
+}
+
+.sugestion-head{
+    width: 100%;
+    height: 13%;
+    /* background-color: #dddddd; */
+    border-bottom: solid 1px black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+.sugestion-head .back-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute; 
+    left: 20px; 
+    font-size: 1.4em; 
+    text-decoration: none;
+    color: #333; 
+    background: none;
+    border: solid 1px black;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.sugestion-head h2 {
+    margin: 0; 
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #333; 
+}
+.sugestion h2{
+    font-size: 24px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.sugestion .form{
+    width: 90%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    background-color: #ffffff;
+    margin-bottom: 20px;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.sugestion .form label{
+    display: block;
+    margin: 5px;
+    font-weight: bold;
+    text-align: left;
+}
+
+.sugestion .form input{
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.sugestion .form select{
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.sugestion .form textarea{
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+
+.form-buttons{
+    display: flex;
+    /* background-color: #0d6790; */
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.sugestion .form .button{
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.sugestion .form .cancel{
+    width: 40%;
+    background-color: #ff553f;
+    color: white;
+    font-weight: bold;
+    font-size: 0.9em;
+    cursor: pointer;
+    border: none;
+
+
+}
+
+.sugestion .form .cancel:hover{
+    background-color: #c53a28;
+}
+
+.sugestion .form .send{
+    width: 55%;
+    background-color: #3f72ff;
+    color: white;
+    font-weight: bold;
+    font-size: 0.9em;
+    cursor: pointer;
+    border: none;
+}
+
+.sugestion .form .send:hover{
+    background-color: #274fbb;
+}
 
 
 
 
 
+
+
+.success-container {
+    height: 100%;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.95); 
+}
+
+.success-container .content{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    /* background-color: #ffd1d1; */
+    width: 100%;
+    height: 100%;
+}
+
+.success-container img{
+    width: 200px;
+    margin-bottom: 20px;
+}
+
+.success-container p {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #0d6790; /* Cor do texto */
+}
+
+.success-container .button.back-home {
+    background-color: #0d6790;
+    color: white;
+    padding: 10px 40px;
+    border: none;
+    cursor: pointer;
+    font-size: 1em;
+    border-radius: 5px;
+}
+
+.success-container .button.back-home:hover {
+    background-color: #0a4e6b; /* Cor ao passar o mouse */
+}
+
+
+
+
+
+
+
+
+
+/**************** modais de sugestao *********************/
 
 .modal {
     display: none;
@@ -322,7 +538,7 @@ body {
 
 
 
-
+/**************************************/
 
 main {
     padding: 2em;
