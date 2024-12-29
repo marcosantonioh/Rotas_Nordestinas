@@ -78,5 +78,5 @@ function showSuccessMessage(event) {
 
 // Função para navegar de volta à página inicial
 function goToHomePage() {
-    window.location.href = 'cidades.html';
+    window.location.href = 'main.html';
 }
