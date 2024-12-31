@@ -1,8 +1,5 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+@import url(/styles/global/global.css);
+
 
 body {
     font-family: 'Inter', sans-serif;
@@ -25,7 +22,7 @@ header {
     width: 100%;
     height: 80px;
     /* background: rgba(255, 255, 255, 0.25); */
-    background: #FBE1B6;
+    background: var(--cor1);
     box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.2);
     backdrop-filter: blur(4px);
     gap: 15em;
@@ -188,14 +185,10 @@ section.intro p {
 }
 
 footer {
-    background: #F3E5D0;
-    border-top: 3px solid #6A4519;
-    border-left: 3px solid #6A4519;
-    border-right: 3px solid #6A4519;
-    border-bottom: 3px solid #6A4519;
+    background: var(--cor4);    
     text-align: center;
     padding: 20px;
-    margin-top: 49px;
+    margin-top: 50px;
 
 }
 
@@ -205,20 +198,23 @@ footer .logo {
     margin: 10px auto;
 }
 
-footer #slogan {
+footer .intro {
     text-align: center;
-    color: #6A4519;
+    color: #ffffff;
+    font-size: 12.85px; 
+    font-family: Inter; 
+    font-weight: 500;
+    margin-bottom: 20px;
+
+}
+
+footer #slogan {
+    text-align: center; color: #ffffff; 
     font-size: 12.85px;
     font-family: Inter;
     font-weight: 800;
-}
+    margin-bottom: 20px;
 
-footer .intro {
-    text-align: center;
-    color: #6A4519;
-    font-size: 12.85px;
-    font-family: Inter;
-    font-weight: 500;
 }
 
 

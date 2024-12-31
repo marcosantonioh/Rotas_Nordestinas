@@ -1,18 +1,6 @@
-/* style.css */
+@import url(/styles/global/global.css);
+
 /* General Reset */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    line-height: 1.6;
-}
-
 
 
 /* Header */
@@ -20,9 +8,9 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: #FBE1B6;
+    background-color: var(--cor1);
     padding: 15px 50px;
-    border-bottom: 1px solid #6A4519;
+    /* border-bottom: 1px solid #6A4519; */
 }
 
 .back-button {
@@ -132,7 +120,6 @@ body {
     gap: 15px;
     justify-content: center;
     margin-bottom: 100px;
-    
 }
 
 
@@ -141,7 +128,7 @@ body {
     text-decoration: none;
     align-items: center;
     text-align: center;
-    background-color: #f4d19d;
+    background-color: var(--cor6);
     padding: 15px 10px;
     cursor: pointer;
     font-size:1em;
@@ -152,10 +139,12 @@ body {
     display: flex;
     justify-content: center;
     gap: 10px;
+    color: white;
 }
 
 .sidebar-content i{
     font-size: 1.2em;
+    color: white;
 }
 
 .sidebar-content .botoes .button:hover {
@@ -246,7 +235,7 @@ body {
 .sugestion{
     width: 100%;
     height: 100%;
-    background-color: #f4d19d;
+    background-color: var(--cor1);
 }
 
 .sugestion-head{
@@ -295,6 +284,8 @@ body {
     margin-bottom: 20px;
     padding: 20px;
     border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.4); /* Ajusta a sombra para dar profundidade */
+
 }
 
 .sugestion .form label{
@@ -349,23 +340,21 @@ body {
 
 .sugestion .form .cancel{
     width: 40%;
-    background-color: #ff553f;
+    background-color: var(--cor5);
     color: white;
     font-weight: bold;
     font-size: 0.9em;
     cursor: pointer;
     border: none;
-
-
 }
 
 .sugestion .form .cancel:hover{
-    background-color: #c53a28;
+    background-color: var(--sombraCor5);
 }
 
 .sugestion .form .send{
     width: 55%;
-    background-color: #3f72ff;
+    background-color: var(--cor6);
     color: white;
     font-weight: bold;
     font-size: 0.9em;
@@ -374,7 +363,7 @@ body {
 }
 
 .sugestion .form .send:hover{
-    background-color: #274fbb;
+    background-color: var(--sombraCor6);
 }
 
 
@@ -609,14 +598,11 @@ main {
 
 
 footer {
-    background: #F3E5D0;
-    border-top: 3px solid #6A4519;
-    border-left: 3px solid #6A4519;
-    border-right: 3px solid #6A4519;
-    border-bottom: 3px solid #6A4519;
+    background: var(--cor4);    
     text-align: center;
     padding: 20px;
     margin-top: 50px;
+
 }
 
 footer .logo {
@@ -627,17 +613,21 @@ footer .logo {
 
 footer .intro {
     text-align: center;
-    color: #6A4519;
+    color: #ffffff;
     font-size: 12.85px; 
     font-family: Inter; 
     font-weight: 500;
+    margin-bottom: 20px;
+
 }
 
 footer #slogan {
-    text-align: center; color: #6A4519; 
+    text-align: center; color: #ffffff; 
     font-size: 12.85px;
     font-family: Inter;
     font-weight: 800;
+    margin-bottom: 20px;
+
 }
 
 

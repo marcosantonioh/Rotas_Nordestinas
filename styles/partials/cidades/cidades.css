@@ -1,9 +1,10 @@
+@import url(/styles/global/global.css);
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
 }
-
 
 
 /*******************  header ****************/
@@ -13,9 +14,32 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: #FBE1B6;
+    background-color: var(--cor1);
     padding: 15px 50px;
-    border-bottom: 1px solid #6A4519;
+    /* border-bottom: 1px solid #6A4519; */
+}
+
+.div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 33%;
+    /* background-color: #007bff; */
+}
+
+.div1{
+    justify-content: start; 
+}
+
+.div2{
+    justify-content: center; 
+}
+
+
+.div3{
+    justify-content: end;
+    display: flex;
+    gap: 30px;
 }
 
 .back-button {
@@ -58,6 +82,7 @@ body {
 
 
 .city-banner {
+    position: relative;
     /* background-color: #c5f8c1; */
     padding-bottom: 20px;
     width: 100%;
@@ -73,6 +98,19 @@ body {
     height: 100%; /* Faz com que a altura da imagem preencha o contêiner */
     object-fit: cover; /* Garante que a imagem seja cortada para preencher o espaço */
     display: block; /* Elimina margens indesejadas */
+}
+
+.city-name{
+    position: absolute;
+    top: 50%; /* Centraliza verticalmente */
+    left: 50%; /* Centraliza horizontalmente */
+    transform: translate(-50%, -50%); /* Ajusta o alinhamento */
+    font-size: 5rem;
+    color: white;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* Adiciona contraste */
+    z-index: 1;
+    text-align: center;
+    font-family:jockey one;
 }
 
 .city-description {
@@ -204,7 +242,7 @@ body {
 }
 
 .part2 .like{
-    width: 35px;
+    width: 25px;
     /* background-color: #86c0ff; */
 }
 
@@ -294,14 +332,11 @@ body {
 
 
 footer {
-    background: #F3E5D0;
-    border-top: 3px solid #6A4519;
-    border-left: 3px solid #6A4519;
-    border-right: 3px solid #6A4519;
-    border-bottom: 3px solid #6A4519;
+    background: var(--cor4);    
     text-align: center;
     padding: 20px;
-    margin-top: 49px;
+    margin-top: 50px;
+
 }
 
 footer .logo {
@@ -310,18 +345,21 @@ footer .logo {
     margin: 10px auto;
 }
 
-footer #slogan {
+footer .intro {
     text-align: center;
-    color: #6A4519;
+    color: #ffffff;
+    font-size: 12.85px; 
+    font-family: Inter; 
+    font-weight: 500;
+    margin-bottom: 20px;
+
+}
+
+footer #slogan {
+    text-align: center; color: #ffffff; 
     font-size: 12.85px;
     font-family: Inter;
     font-weight: 800;
-}
+    margin-bottom: 20px;
 
-footer .intro {
-    text-align: center;
-    color: #6A4519;
-    font-size: 12.85px;
-    font-family: Inter;
-    font-weight: 500;
 }
