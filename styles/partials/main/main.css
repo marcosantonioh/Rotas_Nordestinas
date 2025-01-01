@@ -11,7 +11,7 @@
     background-color: var(--cor1);
     padding: 15px 50px;
     border-bottom: 1px solid #6A4519;
-    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.4);
+    /* box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.4); */
 }
 
 .back-button {
@@ -609,28 +609,32 @@ footer {
 footer .logo {
     width: 133px;
     height: 40px;
-    margin: 10px auto;
+    margin: 20px auto;
 }
 
 footer .intro {
+    padding: 0px 100px;
     text-align: center;
     color: #ffffff;
-    font-size: 12.85px; 
-    font-family: Inter; 
+    /* font-size: 12.85px;  */
+    /* font-family: Inter;  */
     font-weight: 500;
     margin-bottom: 20px;
 
+    font-family: Arial, sans-serif; /* Fonte para o texto */
+    line-height: 1.5; /* Espaçamento entre linhas */
+    /* text-align: justify;  */
+    color: #ffffff; /* Cor do texto */
+    font-size: 15px; /* Tamanho da fonte */
 }
 
 footer #slogan {
     text-align: center; color: #ffffff; 
-    font-size: 12.85px;
+    font-size: 15px; /* Tamanho da fonte */
     font-family: Inter;
     font-weight: 800;
     margin-bottom: 20px;
-
 }
-
 
 
 
