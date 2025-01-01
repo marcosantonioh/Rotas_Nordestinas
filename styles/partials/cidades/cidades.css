@@ -84,7 +84,6 @@ body {
 .city-banner {
     position: relative;
     /* background-color: #c5f8c1; */
-    padding-bottom: 20px;
     width: 100%;
     height: 400px; /* Altura fixa do contêiner */
     display: flex; /* Ativa o flexbox para centralizar a imagem */
@@ -114,8 +113,14 @@ body {
 }
 
 .city-description {
+    /* background-color: #0056b3; */
     text-align: center;
-    padding: 20px;
+    padding: 30px 200px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    margin-top: 10px;
 }
 
 .city-buttons {

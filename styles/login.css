@@ -51,7 +51,7 @@ body {
     align-items: center;
     justify-content: space-around;
     gap: 80px;
-    background-color: #FBE1B6;
+    background-color: var(--cor1);
 }
 
 .head{
@@ -137,7 +137,7 @@ body {
 }
 
 #loginForm .login-button {
-    background-color: #F29559;
+    background-color: var(--cor6);
     color: white;
     border: none;
     padding: 10px;
@@ -150,13 +150,13 @@ body {
 }
 
 #loginForm .login-button:hover {
-    background-color: #9D4F21;
+    background-color: var(--sombraCor6);
 }
 
 /* Link "Esqueceu a senha" */
 #loginForm a {
     text-decoration: none;
-    color: #6A4519;
+    color: var(--sombraCor6);
     margin-top: 5px;
     font-size: 0.8em;
 }
@@ -208,7 +208,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #F29559;
+    background-color: var(--cor6);
     color: white;
     border: none;
     padding: 10px;
@@ -222,7 +222,7 @@ body {
 }
 
 .inputs-forgot .login-button:hover{
-    background-color: #9D4F21;
+    background-color: var(--sombraCor6);
 }
 
 
@@ -288,7 +288,7 @@ body {
     display: block;
     margin-top: 8px;
     font-size: 14px;
-    color: #9D4F21;
+    color: var(--sombraCor6);
     text-decoration: none;
 }
 

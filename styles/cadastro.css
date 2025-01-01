@@ -51,7 +51,7 @@ body {
     align-items: center;
     justify-content: space-around;
     gap: 80px;
-    background-color: #FBE1B6;
+    background-color: var(--cor1);
 }
 
 .head{
@@ -316,11 +316,12 @@ input[type="date"]:focus {
     border: 0.1em solid rgb(145, 145, 145);
     border-radius: 4px;
     cursor: pointer;
-    transition: 0.3s ease;
+    transition: 0.1s ease;
 }
 
 .opcao:hover {
-    background-color: #FBE1B6;
+    color: var(--cor5);
+    border: 0.1em solid var(--cor5);
 }
 
 h3 {
